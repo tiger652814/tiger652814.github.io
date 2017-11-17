@@ -1,35 +1,38 @@
-title: Your Title
-description: > # this means to ignore newlines until "baseurl:"
-  Your description
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "Your-Link.github.io" # the base hostname & protocol for your site
-# Build settings
-markdown: kramdown
+# ----------- CONFIGURABLE START -----------
+title:            "LiberXue|FullStack|独立开发者|jekyll blog|GitHub blog"
+description:      "Full Stack独立开发者|欢迎来到 LiberXue「角落」侃侃理想、谈谈人生、敲敲代码。"
+url:              https://liberxue.github.io # 域名
+signoff:          "LiberXue" # Your name
+facebook_appid:   #liberxue
+google_analytics: UA-101222464-1
+share:            true 
+# 分页
+paginate: 15
+paginate_path: "liberxuepage:num"
+gems: [jekyll-paginate]
+links:
+  - name:         首页
+    url:          /
+    external:     false
+  - name:         书籍
+    url:          /book
+    external:     false
+  - name:         旅游
+    url:          /road
+    external:     false
+  - name:         归档
+    url:          /archives
+    external:     false
+  - name:         标签
+    url:          /tags
+    external:     false
+  - name:         关于
+    url:          /about
+    external:     false
+# ------------ CONFIGURABLE END ------------
 
-facebook:
-  app_id: 
-
-logo: "../css/2016_style/img/icon-large.png"
-
-social: 
-  name: Your Facebook Page
-  link: "https://www.facebook.com/"
-
-google_site_verification: googleXXXXXXXXXXXXXXXX.html
-
-include: ['_2016_pages', '_2017_pages']
-
-gems:
-  - jekyll-sitemap
-  - jekyll-seo-tag
-
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: facebook
-    url: https://www.facebook.com
-  - title: twitter
-    url: https://twitter.com
-
-# Build settings
-markdown: kramdown
-permalink: pretty
+#permalink:        /:categories/:title.html
+permalink: /:year/:month/:day/:title.html
+defaults:
+  - values:
+      layout: "default"
