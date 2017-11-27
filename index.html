@@ -1,69 +1,112 @@
-<!DOCTYPE html>
-<html>
-    <head>
-   
-        <meta charset="UTF-8">
-        <title>网站建设中，敬请期待</title>
-          <script type="text/javascript">
-            window.onload=function(){ 
-                var c=document.getElementById("c");
-                var ctx=c.getContext("2d");
-                c.width=window.innerWidth;
-                c.height=window.innerHeight;
-                  ctx.fillRect(100,100,100,100);
-//              a,b,c,d分别代表x方向偏移,y方向偏移,宽，高
-                var string1 = "abcdefghijklmnopqrstuvwxyz0123456789";
-                string1.split("");
-                var fontsize=20;
-                columns=c.width/fontsize;
-                var drop = [];
-                for(var x=0;x<columns;x++)
-                {
-                    drop[x]=0;
-                }
-            function drap(){
-                ctx.fillStyle="rgba(0,0,0,0.07)";
-                ctx.fillRect(0,0,c.width,c.height);
-                ctx.fillStyle="#0F0";
-                ctx.font=fontsize+"px arial";
-                for(var i=0;i<drop.length;i++){
-                    var text1=string1[Math.floor(Math.random()*string1.length)];
-                    ctx.fillText(text1,i*fontsize,drop[i]*fontsize);
-                    drop[i]++;
-                    if(drop[i]*fontsize>c.height&&Math.random()>0.9){//90%的几率掉落
-                        drop[i]=0;
-                    }
-                }
-            }
-            setInterval(drap,20);
-        }
-         </script>
-    <style type="text/css"> 
-        .map {   
-            height: 100%;  
-            width: 100%;  
-            position: absolute;  
-            top: 0px;  
-            bottom: 0px;  
-            background: #00FF00 url('map/n/n/n.png') repeat;  
-            z-index: -1;  
-            overflow:hidden; word-break:break-all; 
-            alpha(opacity:50);opacity: 0.8;
-        } 
-</style>
-   
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>博客建设中</title>
+	 <link rel="stylesheet" type="text/css" href="css/bootstrap-3.3.4.css">
+	 <link href="css/style2.css" rel="stylesheet" type="text/css">
+	 <link href="style/style.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+	<script  type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
+   	<style type="text/css">
+		/*#all {
+			width: 100%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}*/
+		#c {position:absolute;z-index:-1;}
+	</style>
 </head>
-<body>
-<canvas id="c" class="map"></canvas>
 
-      <h1><center>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p><font color="#FF0000" size="20">博客建设中，敬请期待</font></p>
-      </center></h1> 
+<body>
+
+	<canvas id="c"></canvas>
+	<div id="all">
+		<div style="height:200px;width: 100%;"></div>
+		<div class="header">
+			<h1>博客建设中，敬请期待</h1>
+		</div><!--/header-->
+		<div class="container">
+			<div class="timer-box">
+				<h5>距离2017年研究生考试还有:</h5>	
+				<div id="countdown">
+						
+							<div class="dash weeks_dash">
+								<span class="dash_title">周</span>
+								<div class="digit">0</div>
+								<div class="digit">0</div>
+							</div>
+
+							<div class="dash days_dash">
+								<span class="dash_title">天</span>
+								<div class="digit">0</div>
+								<div class="digit">0</div>
+							</div>
+
+							<div class="dash hours_dash">
+								<span class="dash_title">小时</span>
+								<div class="digit">0</div>
+								<div class="digit">0</div>
+							</div>
+
+							<div class="dash minutes_dash">
+								<span class="dash_title">分</span>
+								<div class="digit">0</div>
+								<div class="digit">0</div>
+							</div>
+
+							<div class="dash seconds_dash">
+								<span class="dash_title">秒</span>
+								<div class="digit">0</div>
+								<div class="digit">0</div>
+							</div>
+					</div> <!-- end of countdown -->
+			</div><!--/timer-box-->
+		</div><!--/container-->
+		<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+		<p>&nbsp;</p>
+	</div>
+	
 <embed src="//music.163.com/style/swf/widget.swf?sid=31654455&type=2&auto=1&width=278&height=32" width="0" height="0"  allowNetworking="all"></embed>
+<script type="text/javascript">
+	var c = document.getElementById("c");
+	var ctx = c.getContext("2d");
+
+	c.height = window.innerHeight;
+	c.width = window.innerWidth;
+	var chinese = "101010 ";
+	chinese = chinese.split("");
+
+	var font_size = 14;
+	var columns = c.width/font_size;
+	//an array of drops - one per column
+	var drops = [];
+	for(var x = 0; x < columns; x++)
+		drops[x] = 1; 
+	//drawing the characters
+	function draw()
+	{
+		ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+		ctx.fillRect(0, 0, c.width, c.height);
+		
+		ctx.fillStyle = "#0F0"; //green text
+		ctx.font = font_size + "px arial";
+		//looping over drops
+		for(var i = 0; i < drops.length; i++)
+		{
+			var text = chinese[Math.floor(Math.random()*chinese.length)];
+			ctx.fillText(text, i*font_size, drops[i]*font_size);
+			
+			if(drops[i]*font_size > c.height && Math.random() > 0.975)
+				drops[i] = 0;
+			
+		drops[i]++;
+		}
+	}
+	setInterval(draw, 33);
+	// document.body.style.background = "url('"+c.toDataURL()+"')";
+</script>
+</div>
 </body>
-<ml>
+</html>
