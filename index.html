@@ -124,74 +124,125 @@
 	// document.body.style.background = "url('"+c.toDataURL()+"')";
 </script>
  <style type="text/css">
+    html {
+    overflow: hidden;
+    }
+    body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin:0;
+    padding:0;
+    }
+    #screen {
+    background:#000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    }
+    #screen span {
+    background: #fff;
+    font-size: 0;
+    overflow: hidden;
+    width: 2px;
+    height: 2px;
+    }
+    </style>
+    <script type="text/javascript">
+    var Follow = function () {
+    var $ = function (i) {return document.getElementById(i)},
+    addEvent = function (o, e, f) {o.addEventListener ? o.addEventListener(e, f, false) : o.attachEvent('on'+e, function(){f.call(o)})},
+    OBJ = [], sp, rs, N = 0, m;
+    var init = function (id, config) {
+    this.config = config || {};
+    this.obj = $(id);
+    sp = this.config.speed || 4;
+    rs = this.config.animR || 1;
+    m = {x: $(id).offsetWidth * .5, y: $(id).offsetHeight * .5};
+    this.setXY();
+    this.start();
+    }
+    init.prototype = {
+    setXY : function () {
+    var _this = this;
+    addEvent(this.obj, 'mousemove', function (e) {
+    e = e || window.event;
+    m.x = e.clientX;
+    m.y = e.clientY;
+    })
+    },
+    start : function () {
+    var k = 180 / Math.PI, OO, o, _this = this, fn = this.config.fn;
+    OBJ[N++] = OO = new CObj(null, 0, 0);
+    for(var i=0;i<360;i+=20){
+    var O = OO;
+    for(var j=10; j<35; j+=1){
+    var x = fn(i, j).x,
+    y = fn(i, j).y;
+    OBJ[N++] = o = new CObj(O , x, y);
+    O = o;
+    }
+    }
+    setInterval(function() {
+    for (var i = 0; i < N; i++) OBJ[i].run();
+    }, 16);
+    }
+    }
+    var CObj = function (p, cx, cy) {
+    var obj = document.createElement("span");
+    this.css = obj.style;
+    this.css.position = "absolute";
+    this.css.left = "-1000px";
+    this.css.zIndex = 1000 - N;
+    document.getElementById("screen").appendChild(obj);
+    this.ddx = 0;
+    this.ddy = 0;
+    this.PX = 0;
+    this.PY = 0;
+    this.x = 0;
+    this.y = 0;
+    this.x0 = 0;
+    this.y0 = 0;
+    this.cx = cx;
+    this.cy = cy;
+    this.parent = p;
+    }
+    CObj.prototype.run = function () {
+    if (!this.parent) {
+    this.x0 = m.x;
+    this.y0 = m.y;
+    } else {
+    this.x0 = this.parent.x;
+    this.y0 = this.parent.y;
+    }
+    this.x = this.PX += (this.ddx += ((this.x0 - this.PX - this.ddx) + this.cx) / rs) / sp;
+    this.y = this.PY += (this.ddy += ((this.y0 - this.PY - this.ddy) + this.cy) / rs) / sp;
+    this.css.left = Math.round(this.x) + 'px';
+    this.css.top = Math.round(this.y) + 'px';
+    }
+    return init;
+    }();
+    </script></head>
+    <body>
+    <!--<div id="screen"></div>-->
+    <script type="text/javascript">
+    new Follow('screen', {speed: 4,
+    animR : 2,
+    fn : function (i, j) {
+    return {
+    x : j/4*Math.cos(i),
+    y : j/4*Math.sin(i)
+    }
+    }})
+    </script>
+ <style type="text/css">
     .spanstyle {
     COLOR: #00cccc; FONT-FAMILY: 宋体; FONT-SIZE: 10pt; POSITION: absolute; TOP: -50px; VISIBILITY: visible
     }
     </style>
     </head>
     <body>
-    <script>
-    var x,y
-    var step=18
-    var flag=0
-    var message="★测试中★"
-    message=message.split("")
-    var xpos=new Array()
-    for (i=0;i<=message.length-1;i++) {
-    xpos[i]=-50
-    }
-    var ypos=new Array()
-    for (i=0;i<=message.length-1;i++) {
-    ypos[i]=-200
-    }
-    function handlerMM(e){
-    x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
-    y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
-    flag=1
-    }
-    function www_kyuanma_com() {
-    if (flag==1 && document.all) {
-    for (i=message.length-1; i>=1; i--) {
-    xpos[i]=xpos[i-1]+step
-    ypos[i]=ypos[i-1]
-    }
-    xpos[0]=x+step
-    ypos[0]=y
-    for (i=0; i<message.length-1; i++) {
-    var thisspan = eval("span"+(i)+".style")
-    thisspan.posLeft=xpos[i]
-    thisspan.posTop=ypos[i]
-    }
-    }
-    else if (flag==1 && document.layers) {
-    for (i=message.length-1; i>=1; i--) {
-    xpos[i]=xpos[i-1]+step
-    ypos[i]=ypos[i-1]
-    }
-    xpos[0]=x+step
-    ypos[0]=y
-    for (i=0; i<message.length-1; i++) {
-    var thisspan = eval("document.span"+i)
-    thisspan.left=xpos[i]
-    thisspan.top=ypos[i]
-    }
-    }
-    var timer=setTimeout("www_kyuanma_com()",30)
-    }
-    for (i=0;i<=message.length-1;i++) {
-    document.write("<span id='span"+i+"' class='spanstyle'>")
-    document.write(message[i])
-    document.write("</span>")
-    }
-    if (document.layers){
-    document.captureEvents(Event.MOUSEMOVE);
-    }
-    document.onmousemove = handlerMM;
-    www_kyuanma_com();
-    // -->
-    </script>
-
-<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+  <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
 <p>&nbsp;</p>
 </div>
 
