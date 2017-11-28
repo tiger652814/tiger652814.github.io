@@ -10,6 +10,7 @@
 
 <script src="js/jquery-1.8.3.min.js"></script>    
 <script src="js/jquery.lwtCountdown-1.0.js"></script> 
+
 <style>
 	#c {position:absolute;z-index:-1;}
 	#kong {width: 100%;height: 200px;}
@@ -122,9 +123,78 @@
 	setInterval(draw, 33);
 	// document.body.style.background = "url('"+c.toDataURL()+"')";
 </script>
+ <style type="text/css">
+    .spanstyle {
+    COLOR: #00cccc; FONT-FAMILY: 宋体; FONT-SIZE: 10pt; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+    }
+    </style>
+    </head>
+    <body>
+    <script>
+    var x,y
+    var step=18
+    var flag=0
+    var message="★测试中★"
+    message=message.split("")
+    var xpos=new Array()
+    for (i=0;i<=message.length-1;i++) {
+    xpos[i]=-50
+    }
+    var ypos=new Array()
+    for (i=0;i<=message.length-1;i++) {
+    ypos[i]=-200
+    }
+    function handlerMM(e){
+    x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+    y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+    flag=1
+    }
+    function www_kyuanma_com() {
+    if (flag==1 && document.all) {
+    for (i=message.length-1; i>=1; i--) {
+    xpos[i]=xpos[i-1]+step
+    ypos[i]=ypos[i-1]
+    }
+    xpos[0]=x+step
+    ypos[0]=y
+    for (i=0; i<message.length-1; i++) {
+    var thisspan = eval("span"+(i)+".style")
+    thisspan.posLeft=xpos[i]
+    thisspan.posTop=ypos[i]
+    }
+    }
+    else if (flag==1 && document.layers) {
+    for (i=message.length-1; i>=1; i--) {
+    xpos[i]=xpos[i-1]+step
+    ypos[i]=ypos[i-1]
+    }
+    xpos[0]=x+step
+    ypos[0]=y
+    for (i=0; i<message.length-1; i++) {
+    var thisspan = eval("document.span"+i)
+    thisspan.left=xpos[i]
+    thisspan.top=ypos[i]
+    }
+    }
+    var timer=setTimeout("www_kyuanma_com()",30)
+    }
+    for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+    document.write(message[i])
+    document.write("</span>")
+    }
+    if (document.layers){
+    document.captureEvents(Event.MOUSEMOVE);
+    }
+    document.onmousemove = handlerMM;
+    www_kyuanma_com();
+    // -->
+    </script>
+
 <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
 <p>&nbsp;</p>
 </div>
+
 </body>
 </html>
 
