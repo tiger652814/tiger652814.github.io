@@ -22,11 +22,11 @@ a {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1200%;
 	height: auto;
 	margin: 20px auto;
 	}
-#img.source-image {width: 100%;position: absolute;top: 0;left: 0;} 
+
 .header {
 	width: 100%;
 	height: auto;
@@ -35,7 +35,7 @@ a {
 	}
 	
 .header h1 {
-	font-size: 80px;
+	font-size: 80%;
 	color: #fff;
 	text-align: center;
 	font-family: 'Lato', sans-serif;
@@ -51,9 +51,9 @@ a {
 	margin: 0px auto;
 	
 	
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+	-webkit-border-radius: 10%;
+	-moz-border-radius: 10%;
+	border-radius: 10%;
 	
 	-moz-box-shadow: 0 0 5px #000;
 	-webkit-box-shadow: 0 0 5px#000;
