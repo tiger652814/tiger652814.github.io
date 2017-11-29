@@ -22,7 +22,7 @@ a {
 }
 
 .container {
-	max-width: 1200%;
+	max-width: 1200px;
 	height: auto;
 	margin: 20px auto;
 	}
@@ -35,7 +35,7 @@ a {
 	}
 	
 .header h1 {
-	font-size: 80%;
+	font-size: 80px;
 	color: #fff;
 	text-align: center;
 	font-family: 'Lato', sans-serif;
@@ -51,9 +51,9 @@ a {
 	margin: 0px auto;
 	
 	
-	-webkit-border-radius: 10%;
-	-moz-border-radius: 10%;
-	border-radius: 10%;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 	
 	-moz-box-shadow: 0 0 5px #000;
 	-webkit-box-shadow: 0 0 5px#000;
