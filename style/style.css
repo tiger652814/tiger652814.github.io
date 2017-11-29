@@ -1,18 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
-*{margin:0;padding: 0}
+
 body { 
-	width: 100%;
-	height: 100%;
-	margin-top: 0px;
-	/*background-position: center top #333; */
-	/*background-image: url(img/bg.jpg); */
-	/*background-color: #090D16;*/
-}
-#all {
+	background-position: center top #333; 
+	background-image: url(img/bg.jpg); 
+	background-color: #090D16; 
 	width: 100%;
 	height: 100%;
 }
+
 li {
 	list-style: none;
 	}
@@ -22,32 +18,28 @@ a {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 100%;
 	height: auto;
-	margin: 20px auto;
 	}
 
 .header {
 	width: 100%;
 	height: auto;
-	text-align: center;
-
 	}
 	
 .header h1 {
-	font-size: 80px;
+	font-size: 8em;
 	color: #fff;
 	text-align: center;
 	font-family: 'Lato', sans-serif;
 	text-transform:uppercase;
-	height: 101px;
 	/*margin-top: 200px;*/
 	}
 	
 .timer-box {
 	background: #f5f5f5;
-	padding: 40px 20px;
-	width: 70%;
+	padding: 10% 5%;
+	width: 80%;
 	margin: 0px auto;
 	
 	
@@ -62,7 +54,7 @@ a {
 	}
 	
 .timer-box h5 {
-	font-size:24px;
+	font-size:2em;
 	color: #333;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
@@ -72,34 +64,41 @@ a {
 /** Countdown */
 
 #countdown {
-	width: auto;
-	max-width:747px;
+	width: 100%;
+	/*max-width:120%;*/
+/*	background-color: red;*/
 	height:auto;
 	margin: 0px auto;
 	display: inline-block;
-	margin-top: 12px;
-
+	margin-top: 2%;
 }
 .dash {
-	width: 127px;
+	/*width: 15%;*/
 	height: 125px;
 	background: transparent url(img/t-box.jpg) 0 0 no-repeat;
 	float: left;
-	margin-left: 20px;
+	margin-left: 3%;
 	position: relative;
 }
 
 .dash .digit {
-	font-size: 70px;
+	font-size: 4em;
 	font-weight: bold;
 	float: left;
-	width: 45px;
+	
 	text-align: center;
 	font-family: Arial;
 	color: #2f2e2e;
 	position: relative;
 	margin: 10px 0 0 13px;
-	padding-top:9px;
+	padding-top:10%;
+}
+.dash{
+	width: 16%;
+	/*height: 150%;*/
+}
+.digit{
+	width: 30%;
 }
 
 .dash_title {
@@ -108,10 +107,10 @@ a {
 	bottom: 0px;
 	text-align:center;
 	font-weight:bold;
-	width:127px;
-	font-size: 12px;
+	width:80%;
+	font-size: 1em;
 	color: #2f2e2e;
-	
+	margin-bottom: 20%;
 }
 
 
