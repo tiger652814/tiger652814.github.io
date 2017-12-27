@@ -1,0 +1,219 @@
+URL 1:
+GET http://www.dipintoguitars.com/category.php?id=1
+do you want to test this URL? [Y/n/q]
+> n
+
+URL 2:
+GET http://www.bible-history.com/subcat.php?id=1
+do you want to test this URL? [Y/n/q]
+> n
+
+URL 3:
+GET http://www.romanianwriters.ro/s.php?id=1
+do you want to test this URL? [Y/n/q]
+> n
+
+URL 4:
+GET http://www.xrayrisk.com/calculator/calculator-normal-studies.php?id=1
+do you want to test this URL? [Y/n/q]
+> n
+
+URL 5:
+GET http://berkeleyrecycling.org/page.php?id=1
+do you want to test this URL? [Y/n/q]
+> n
+
+URL 6:
+GET http://www.atrium.com.pk/Shopping.php?ID=1
+do you want to test this URL? [Y/n/q]
+> Y
+
+URL 7:
+GET http://www.jbctools.com/cataleg.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 8:
+GET http://www.teamgear.us/store.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 9:
+GET http://www.bpc.gov.bd/contactus.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 10:
+GET http://www.atrium.com.pk/Shopping.php?ID=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 11:
+GET http://www.multan.gov.pk/files.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 12:
+GET http://www.jbctools.com/cataleg.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+URL 13:
+GET https://www.fleurlis.com.tw/en/wedding.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 14:
+GET http://esjindex.org/search.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 15:
+GET http://www.bpc.gov.bd/contactus.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 16:
+GET http://vacationet.com/resort.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 17:
+GET http://www.shortrifles.com/configuration.php?id=1
+do you want to test this URL? [Y/n/q]
+> N  有注入点
+
+URL 18:
+GET https://ssy.org/detail.php?id=1
+do you want to test this URL? [Y/n/q]
+> N  有注入点
+
+URL 19:
+GET https://www.oxfordielts.ielts.express/online_enroll1_com_new.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 20:
+GET http://esjindex.org/search.php?id=1
+do you want to test this URL? [Y/n/q]
+>  N  有注入点
+
+URL 21:
+GET http://www.asfaa.org/members.php?id=1
+do you want to test this URL? [Y/n/q]
+> N  有注入点
+
+URL 22:
+GET http://nightgallery.ca/event.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 23:
+GET http://yggdrasilrecords.net/artists.php?id=1
+do you want to test this URL? [Y/n/q]
+> N  有注入点
+
+
+URL 24:
+GET http://www.sitepoint.com/forums/showthread.php?191843-view-php-id-1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 25:
+GET https://www.sitepoint.com/community/t/edit-php-id-1-help/82588
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 26:
+GET http://www.minutesemeiotic.org/home.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 27:
+GET http://koshi.fr/achat/produit_details.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 28:
+GET http://www.photobiology.org/asp.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 29:
+GET https://www.kianjoocan.com.my/index.php?id=1
+do you want to test this URL? [Y/n/q]
+> N
+
+URL 30:
+GET http://www.sansihotels.com/hotels.php?id=1
+do you want to test this URL? [Y/n/q]
+> 
+
+
+URL 31:
+URL 32:
+URL 33:
+URL 34:
+URL 35:
+URL 36:
+URL 37:
+URL 38:
+URL 39:
+URL 40:
+URL 41:
+URL 42:
+URL 43:
+URL 44:
+URL 45:
+URL 46:
+URL 47:
+URL 48:
+URL 49:
+URL 50:
+URL 51:
+URL 52:
+URL 53:
+URL 54:
+URL 55:
+URL 56:
+URL 57:
+URL 58:
+URL 59:
+URL 60:
+URL 61:
+URL 62:
+URL 63:
+URL 64:
+URL 65:
+URL 66:
+URL 67:
+URL 68:
+URL 69:
+URL 70:
+URL 71:
+URL 72:
+URL 73:
+URL 74:
+URL 75:
+URL 76:
+URL 77:
+URL 78:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
